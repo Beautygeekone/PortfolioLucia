@@ -1,0 +1,185 @@
+ 
+ 
+ :root {
+      --verde-suave: #92AC87;
+      --beige: #F2D6A2;
+      --coral: #EF8B7D;
+      --rojo-quemado: #D86B67;
+      --azul-gris: #2F3B3C;
+      --texto-claro: #FAFAFA;
+      --texto-oscuro: #2C2C2C;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Josefin Sans', sans-serif;
+      background-color: var(--azul-gris);
+      background-image: url('https://wallpapercave.com/wp/wp8651794.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--texto-claro);
+      line-height: 1.6;
+    }
+
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 59, 60, 0.65); 
+  z-index: -1;
+}
+
+    h1, h2 {
+      text-align: center;
+      color: var(--texto-claro);
+      margin-top: 2rem;
+    }
+
+    .main-container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      background-color: rgba(47, 59, 60, 0.8);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      padding: 2.5rem;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      background: linear-gradient(to bottom, var(--verde-suave), var(--beige), var(--coral), var(--rojo-quemado));
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      text-align: center;
+      padding: 2rem;
+      color: var(--texto-claro);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      margin-bottom: 1rem;
+    }
+
+    .carousel-slide h3 {
+      margin-bottom: 0.5rem;
+      color: var(--texto-claro);
+    }
+
+    .carousel-slide p {
+      max-width: 600px;
+      margin: 0 auto 1rem;
+      color: var(--texto-claro);
+      text-align: center;
+    }
+
+    .carousel-slide a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1.4rem;
+      background-color: var(--texto-claro);
+      color: var(--azul-gris);
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-slide a:hover {
+      background-color: var(--beige);
+      color: var(--azul-gris);
+      transform: translateY(-3px);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      border-radius: 0;
+      transition: background 0.3s;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    
+    .contact {
+      margin-top: 3rem;
+      background: var(--verde-suave);
+      border-radius: 0px;
+      padding: 2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 1rem;
+      color: var(--texto-oscuro);
+    }
+
+    .contact-links {
+      margin-top: 1rem;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      color: var(--texto-claro);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .contact-links a:hover {
+      color: var(--beige);
+    }
